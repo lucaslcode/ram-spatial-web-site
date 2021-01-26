@@ -1,1 +1,9 @@
-<a-scene arjs></a-scene>
+<a-scene arjs stats resonance-room>
+  <a-assets timeout="10000">
+    <audio id="jb1" src="assets/jb/jb1.ogg" preload="auto"></audio>
+    <audio id="jb2" src="assets/jb/jb2.ogg" preload="auto"></audio>
+    <audio id="jb3" src="assets/jb/jb3.ogg" preload="auto"></audio>
+    <audio id="jb4" src="assets/jb/jb4.ogg" preload="auto"></audio>
+  </a-assets>
+  <a-entity audio-visualiser position="0 1.6 -1" resonance-source="#jb1"></a-entity>
+</a-scene>
