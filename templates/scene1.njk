@@ -1,11 +1,12 @@
 <a-scene arjs stats resonance-room>
-  <a-assets timeout="10000">
     <audio id="jb1" src="assets/jb/jb1.ogg" preload="auto"></audio>
     <audio id="jb2" src="assets/jb/jb2.ogg" preload="auto"></audio>
     <audio id="jb3" src="assets/jb/jb3.ogg" preload="auto"></audio>
     <audio id="jb4" src="assets/jb/jb4.ogg" preload="auto"></audio>
-  </a-assets>
   <a-entity resonance-room>
-    <a-entity audio-visualiser position="0 1.6 -1" resonance-source="#jb1"></a-entity>
+    <a-entity audio-visualiser position="-2 1.6 -2" resonance-source="#jb1"></a-entity>
+    <a-entity audio-visualiser position="2 1.6 -2" resonance-source="#jb2"></a-entity>
+    <a-entity audio-visualiser position="-2 1.6 2" resonance-source="#jb3"></a-entity>
+    <a-entity audio-visualiser position="2 1.6 2" resonance-source="#jb4"></a-entity>
   </a-entity>
 </a-scene>
