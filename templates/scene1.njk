@@ -1,12 +1,15 @@
-<a-scene arjs stats resonance-room>
-    <audio id="jb1" src="assets/jb/jb1.ogg" preload="auto"></audio>
-    <audio id="jb2" src="assets/jb/jb2.ogg" preload="auto"></audio>
-    <audio id="jb3" src="assets/jb/jb3.ogg" preload="auto"></audio>
-    <audio id="jb4" src="assets/jb/jb4.ogg" preload="auto"></audio>
-  <a-entity resonance-room>
+<a-scene arjs stats>
+  <a-entity id="loader" loader="bar: #loading-bar">
+    <audio id="jb1" src="assets/jb/jb1.ogg"></audio>
+    <audio id="jb2" src="assets/jb/jb2.ogg"></audio>
+    <audio id="jb3" src="assets/jb/jb3.ogg"></audio>
+    <audio id="jb4" src="assets/jb/jb4.ogg"></audio>
+  </a-entity>
+  <a-entity id="resonance-room" resonance-room="loader: #loader">
     <a-entity audio-visualiser position="-2 1.6 -2" resonance-source="#jb1"></a-entity>
     <a-entity audio-visualiser position="2 1.6 -2" resonance-source="#jb2"></a-entity>
     <a-entity audio-visualiser position="-2 1.6 2" resonance-source="#jb3"></a-entity>
     <a-entity audio-visualiser position="2 1.6 2" resonance-source="#jb4"></a-entity>
   </a-entity>
+  <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
 </a-scene>

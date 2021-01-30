@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <title>RAM Spatial Test</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://mozilla.github.io/nunjucks/files/nunjucks.min.js"></script>
     <script src="main.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
@@ -11,6 +12,8 @@
     <script>
       nunjucks.configure('templates', { autoescape: true });
       document.write(nunjucks.render('scene1.njk'));
+      document.write(nunjucks.render('clicktostart.njk'));
+      document.write(nunjucks.render('loadingbar.njk'));
     </script>
   </body>
 </html>
