@@ -1,9 +1,9 @@
 <a-scene arjs stats>
   <a-entity id="loader" loader="bar: #loading-bar">
-    <audio id="jb1" src="assets/jb/jb1.mp4"></audio>
-    <audio id="jb2" src="assets/jb/jb2.mp4"></audio>
-    <audio id="jb3" src="assets/jb/jb3.mp4"></audio>
-    <audio id="jb4" src="assets/jb/jb4.mp4"></audio>
+    <audio id="jb1" src="assets/jb/jb1.mp4" preload="auto"></audio>
+    <audio id="jb2" src="assets/jb/jb2.mp4" preload="auto"></audio>
+    <audio id="jb3" src="assets/jb/jb3.mp4" preload="auto"></audio>
+    <audio id="jb4" src="assets/jb/jb4.mp4" preload="auto"></audio>
   </a-entity>
   <a-entity id="resonance-room" resonance-room="loader: #loader">
     <a-entity audio-visualiser position="-2 1.6 -2" resonance-source="#jb1"></a-entity>
