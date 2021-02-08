@@ -23,19 +23,37 @@ div#loading-bar > div > * {
   position: absolute;
   top: 0;
   left: 0;
-  transition: opacity 3s;
   z-index: 999;
   height: 100vh;
   width: 100vw;
   background-color: black;
   color: lightgray;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-
+  transition: opacity 3s;
 }
 
-#click-to-start {
-  margin: auto auto;
-  text-align: center;
+#play-button-container {
+  position: absolute;
+  top: 65vh;
+  left: calc(50vw - 40px);
+  z-index: 999;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 0;
+}
+
+#play-button {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: lightgray;
+  border-radius: 10px;
+  border: 0;
 }

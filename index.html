@@ -11,9 +11,9 @@
   <body>
     <script>
       nunjucks.configure('templates', { autoescape: true });
-      document.write(nunjucks.render('scene1.njk'));
-      document.write(nunjucks.render('clicktostart.njk'));
-      document.write(nunjucks.render('loadingbar.njk'));
+      document.write(nunjucks.render('main.njk'));
+      document.write(nunjucks.render('startOverlay.njk'));
+      document.write(nunjucks.render('playButton.njk'));
     </script>
   </body>
 </html>
