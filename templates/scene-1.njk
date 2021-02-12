@@ -28,41 +28,40 @@
   </a-timeline-group>
 </a-timeline>
 
-<a-mixin id="move-animations"
-  animation__move1="property: position; dur: 5000; from: -2 0 -2; to: 2 0 -2; autoplay: false"
-  animation__move2="property: position; dur: 5000; from: 2 0 -2; to: 2 0 2; autoplay: false"
-  animation__move3="property: position; dur: 5000; from: 2 0 2; to: -2 0 2; autoplay: false"
-  animation__move4="property: position; dur: 5000; from: -2 0 2; to: -2 0 -2; autoplay: false"
-></a-mixin>
+<a-entity animation-timeline__1="timeline: #timeline1; loop: true;">
+  <a-mixin id="move-animations"
+    animation__move1="property: position; dur: 5000; from: -2 0 -2; to: 2 0 -2; autoplay: false"
+    animation__move2="property: position; dur: 5000; from: 2 0 -2; to: 2 0 2; autoplay: false"
+    animation__move3="property: position; dur: 5000; from: 2 0 2; to: -2 0 2; autoplay: false"
+    animation__move4="property: position; dur: 5000; from: -2 0 2; to: -2 0 -2; autoplay: false"
+  ></a-mixin>
 
-<a-entity animation-timeline__1="timeline: #timeline1; loop: true;"
-></a-entity>
-
-<a-entity
-  id="audio1"
-  audio-visualiser
-  position="-2 0 -2"
-  resonance-source="#jb1"
-  mixin="move-animations"
-></a-entity>
-<a-entity
-  id="audio2"
-  audio-visualiser
-  position="2 0 -2"
-  resonance-source="#jb2"
-  mixin="move-animations"
-></a-entity>
-<a-entity
-  id="audio3"
-  audio-visualiser
-  position="2 0 2"
-  resonance-source="#jb3"
-  mixin="move-animations"
-></a-entity>
-<a-entity
-  id="audio4"
-  audio-visualiser
-  position="-2 0 2"
-  resonance-source="#jb4"
-  mixin="move-animations"
-></a-entity>
+  <a-entity
+    id="audio1"
+    audio-visualiser
+    position="-2 0 -2"
+    resonance-source="#jb1"
+    mixin="move-animations"
+  ></a-entity>
+  <a-entity
+    id="audio2"
+    audio-visualiser
+    position="2 0 -2"
+    resonance-source="#jb2"
+    mixin="move-animations"
+  ></a-entity>
+  <a-entity
+    id="audio3"
+    audio-visualiser
+    position="2 0 2"
+    resonance-source="#jb3"
+    mixin="move-animations"
+  ></a-entity>
+  <a-entity
+    id="audio4"
+    audio-visualiser
+    position="-2 0 2"
+    resonance-source="#jb4"
+    mixin="move-animations"
+  ></a-entity>
+</a-entity>
