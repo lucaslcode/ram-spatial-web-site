@@ -58,3 +58,18 @@ div#loading-bar > div > * {
   border-radius: 10px;
   border: 0;
 }
+
+#error-overlay {
+  z-index: 1001;
+  font-size: 10vw;
+  color: white;
+  background-color: #660000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  align-items: center;
+  padding: 1em;
+}
