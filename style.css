@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+html {
+  font-family: 'Lato', sans-serif;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
 div#loading-bar {
   z-index: 998;
   height: 100vh;
@@ -31,33 +45,49 @@ div#loading-bar > div > * {
   color: lightgray;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   transition: opacity 3s;
 }
 
-#play-button-container {
-  position: absolute;
-  top: 65vh;
-  left: calc(50vw - 40px);
-  z-index: 999;
-  height: 80px;
-  width: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  border: 0;
+#start-overlay h1, #start-overlay h2 {
+  font-weight: normal;
+}
+#start-overlay h1 {
+  font-size: clamp(2rem, 1rem + 5vw, 4rem);
+}
+#start-overlay h2 {
+  font-size: clamp(1.25rem, 0.75rem + 2vw, 2.5rem);
+}
+
+#play-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 1s;
+  padding: 2vw;
+  padding-top: 4vw;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+  color: lightgray;
+}
+
+a-marker * {
+  display: none;
 }
 
 #play-button {
-  width: 100%;
-  height: 100%;
-  background-color: black;
   color: lightgray;
-  border-radius: 10px;
-  border: 0;
+  border-radius: 8px;
+  border: 1px solid lightgray;
+  background: transparent;
+  padding: 8px;
+  min-width: 64px;
 }
+
+#play-button:hover { border-width: 3px; transform: translateY(-2px); }
+#play-button:active { padding: 6px; transform: scale(1.1); }
 
 #error-overlay {
   z-index: 1001;
