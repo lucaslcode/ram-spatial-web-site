@@ -86,8 +86,9 @@ a-marker * {
   min-width: 64px;
 }
 
-#play-button:hover { border-width: 3px; transform: translateY(-2px); }
-#play-button:active { padding: 6px; transform: scale(1.1); }
+#play-button:disabled { border-color: darkgray; }
+#play-button:hover:enabled { border-width: 3px; margin-top: -2px; margin-bottom: -2px; }
+#play-button:active:enabled { transform: translateY(4px); }
 
 #error-overlay {
   z-index: 1001;
