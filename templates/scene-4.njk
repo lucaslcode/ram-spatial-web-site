@@ -11,12 +11,29 @@
 </a-timeline>
 
 <a-entity animation-timeline__1="timeline: #timeline1; loop: true;">
-
+  <a-entity
+    id="audio3"
+    audio-visualiser
+    position="0.7 0 0"
+    resonance-source="0"
+  ></a-entity>
+  <a-entity
+    id="audio4"
+    audio-visualiser
+    position="-2 0 -1"
+    resonance-source="1"
+  ></a-entity>
+  <a-entity
+    id="audio5"
+    audio-visualiser
+    position="0 1 0"
+    resonance-source="2"
+  ></a-entity>
   <a-entity
     id="audio1"
     audio-visualiser
     position="-1 0 -2"
-    resonance-source="#4synth"
+    resonance-source="3"
     animation__move1="property: position; dur: 2000; from: -1 0 -2; to: 1 0 -2; autoplay: false"
     animation__move2="property: position; dur: 2000; from: 1 0 -2; to: -1 0 -2; autoplay: false"
   ></a-entity>
@@ -24,26 +41,8 @@
     id="audio2"
     audio-visualiser
     position="1 0 1"
-    resonance-source="#4vla"
+    resonance-source="4"
     animation__move1="property: position; dur: 2000; from: 1 0 1; to: -1 0 1; autoplay: false"
     animation__move2="property: position; dur: 2000; from: -1 0 1; to: 1 0 1; autoplay: false"
-  ></a-entity>
-  <a-entity
-    id="audio3"
-    audio-visualiser
-    position="0.7 0 0"
-    resonance-source="#4bass"
-  ></a-entity>
-  <a-entity
-    id="audio4"
-    audio-visualiser
-    position="-2 0 -1"
-    resonance-source="#4sharpener1"
-  ></a-entity>
-  <a-entity
-    id="audio5"
-    audio-visualiser
-    position="0 1 0"
-    resonance-source="#4sharpener2"
   ></a-entity>
 </a-entity>
