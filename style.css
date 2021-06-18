@@ -92,7 +92,7 @@ a-marker * {
 
 #error-overlay {
   z-index: 1001;
-  font-size: 10vw;
+  font-size: 8vw;
   color: white;
   background-color: #660000;
   position: absolute;
