@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>RAM Spatial Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="p-style.css">
+    <script src="https://mozilla.github.io/nunjucks/files/nunjucks.min.js"></script>
+  </head>
+  <body>
+    <p>The iPhone has problems combining spatial audio with augmented reality.</p>
+    <p>You are still listening to the spatial experience. Point your phone in the direction you want to listen.</p>
+    <script>
+      nunjucks.configure('templates', { autoescape: true });
+      document.write(nunjucks.render('playButton.njk'));
+      document.write(nunjucks.render('errorOverlay.njk'));
+    </script>
+    <script src="p.js"></script>
+  </body>
+</html>
