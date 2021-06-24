@@ -3,6 +3,8 @@ a-entity { display: none; }
 body {
   background-color: black;
   color: lightgray;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 

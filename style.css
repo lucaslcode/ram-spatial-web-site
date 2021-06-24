@@ -1,7 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: 'Lato', sans-serif;
+}
+
+
+body {
+  overflow: hidden;
+  background-color: black;
 }
 
 .fade-out {
@@ -103,4 +113,53 @@ a-marker * {
   display: none;
   align-items: center;
   padding: 1em;
+}
+
+#freeze-button {
+  display: block;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  color: lightgray;
+  border-radius: 8px;
+  border: 1px solid lightgray;
+  background: transparent;
+  padding: 8px;
+  min-width: 64px;
+  background-color: black;
+  text-align: right;
+  opacity: 0.6;
+  z-index: 999;
+}
+
+#freeze-checkbox {opacity: 0; position: absolute;}
+
+#freeze-checkbox:checked + label {
+  color: black;
+  background-color:#777;
+  opacity: 1;
+}
+
+#freeze-checkbox:active + label {
+  transform: translateY(1px);
+}
+
+#freeze-checkbox:hover + label {
+  border-width: 3px; margin-top: -2px; margin-bottom: -2px;
+}
+
+#freeze-overlay {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  display: none;
+}
+
+#freeze-checkbox:checked ~ #freeze-overlay{
+  display: block;
 }
