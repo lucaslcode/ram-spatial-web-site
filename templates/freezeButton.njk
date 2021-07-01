@@ -1,2 +1,12 @@
 <input type="checkbox" id="freeze-checkbox">
 <label id="freeze-button" for="freeze-checkbox">Freeze listening<br>perspective</label>
+
+<script type="text/javascript">
+  document.getElementById("freeze-checkbox").addEventListener("change", function() {
+    const id = window.localStorage.getItem("aid");
+    if (id) {
+      fetch("https://spatialstats.lucas-levin.com/" + id + "/freeze/" + this.checked.toString(), {mode: "no-cors"})
+        .catch();
+    }
+  })
+</script>

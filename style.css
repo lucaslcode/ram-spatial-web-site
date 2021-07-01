@@ -55,9 +55,10 @@ div#loading-bar > div > * {
   color: lightgray;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   transition: opacity 3s;
+  padding: 20px;
 }
 
 #start-overlay h1, #start-overlay h2 {
@@ -87,7 +88,7 @@ a-marker * {
   display: none;
 }
 
-#play-button {
+button {
   color: lightgray;
   border-radius: 8px;
   border: 1px solid lightgray;
@@ -96,9 +97,9 @@ a-marker * {
   min-width: 64px;
 }
 
-#play-button:disabled { border-color: darkgray; }
-#play-button:hover:enabled { border-width: 3px; margin-top: -2px; margin-bottom: -2px; }
-#play-button:active:enabled { transform: translateY(4px); }
+button:disabled { border-color: darkgray; }
+button:hover:enabled { border-width: 3px; margin-top: -2px; margin-bottom: -2px; }
+button:active:enabled { transform: translateY(4px); }
 
 #error-overlay {
   z-index: 1001;
@@ -120,12 +121,6 @@ a-marker * {
   position: fixed;
   right: 10px;
   bottom: 10px;
-  color: lightgray;
-  border-radius: 8px;
-  border: 1px solid lightgray;
-  background: transparent;
-  padding: 8px;
-  min-width: 64px;
   background-color: black;
   text-align: right;
   opacity: 0.6;
