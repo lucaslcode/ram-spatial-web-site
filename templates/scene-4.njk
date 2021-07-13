@@ -1,5 +1,5 @@
 <a-timeline id="timeline1">
-  <a-timeline-group>
+  <!--<a-timeline-group>
     <a-timeline-animation select="#audio1" name="move1"></a-timeline-animation>
     <a-timeline-animation select="#audio2" name="move1"></a-timeline-animation>
   </a-timeline-group>
@@ -7,29 +7,35 @@
   <a-timeline-group>
     <a-timeline-animation select="#audio1" name="move2"></a-timeline-animation>
     <a-timeline-animation select="#audio2" name="move2"></a-timeline-animation>
-  </a-timeline-group>
+  </a-timeline-group>-->
 </a-timeline>
 
-<a-entity animation-timeline__1="timeline: #timeline1; loop: true;">
+<a-entity animation-timeline__1="timeline: #timeline1; loop: false;">
   <a-entity
-    id="audio3"
+    id="violin1"
     audio-visualiser
-    position="0.7 0 0"
+    position="-0.75 0 -5"
     resonance-source="0"
   ></a-entity>
   <a-entity
-    id="audio4"
+    id="violin2"
     audio-visualiser
-    position="-2 0 -1"
+    position="-0.25 0 -5.5"
     resonance-source="1"
   ></a-entity>
   <a-entity
-    id="audio5"
+    id="viola"
     audio-visualiser
-    position="0 1 0"
+    position="0.25 0 -5.5"
     resonance-source="2"
   ></a-entity>
   <a-entity
+    id="cello"
+    audio-visualiser
+    position="0.75 0 -5"
+    resonance-source="3"
+  ></a-entity>
+  <!--<a-entity
     id="audio1"
     audio-visualiser
     position="-1 0 -2"
@@ -44,5 +50,5 @@
     resonance-source="4"
     animation__move1="property: position; dur: 2000; from: 1 0 1; to: -1 0 1; autoplay: false"
     animation__move2="property: position; dur: 2000; from: -1 0 1; to: 1 0 1; autoplay: false"
-  ></a-entity>
+  ></a-entity>-->
 </a-entity>
