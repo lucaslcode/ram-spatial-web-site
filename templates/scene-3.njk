@@ -1,35 +1,39 @@
 <a-timeline id="timeline1">
-  <a-timeline-group>
+  <!--<a-timeline-group>
     <a-timeline-animation select="#audio1" name="move1"></a-timeline-animation>
     <a-timeline-animation select="#audio2" name="move1"></a-timeline-animation>
-  </a-timeline-group>
+  </a-timeline-group>-->
 </a-timeline>
 
 <a-entity animation-timeline__1="timeline: #timeline1; loop: false;">
   <a-entity
   id="audio1"
   audio-visualiser
-  position="-2 1.5 -30"
+  position="0.5 0 -1.5"
   resonance-source="0"
-  animation__move1="property: position; dur: 30000; from: -2 1.5 -30; to: 2 1.5 -1.5; easing: linear; autoplay: false"
-></a-entity>
+  ></a-entity>
   <a-entity
     id="audio2"
     audio-visualiser
-    position="1 0 -2"
+    position="2 0 -2"
     resonance-source="1"
-    animation__move1="property: position; dur: 20000; from: -5 0 -1; to: 5 0 -1; easing: linear; autoplay: false"
   ></a-entity>
-  <!--a-entity
-    id="audio3"
-    audio-visualiser
-    position="-5 -1 0"
-    resonance-source="#demo3"
-    ></a-entity-->
   <a-entity
-    id="audio4"
+    id="audio2"
     audio-visualiser
-    position="0 0 -5"
+    position="-2 0 -2"
     resonance-source="2"
+  ></a-entity>
+  <a-entity
+    id="audio2"
+    audio-visualiser
+    position="2 0 2"
+    resonance-source="3"
+  ></a-entity>
+  <a-entity
+    id="audio2"
+    audio-visualiser
+    position="-2 0 2"
+    resonance-source="4"
   ></a-entity>
 </a-entity>

@@ -1,66 +1,102 @@
 <a-timeline id="timeline1">
   <a-timeline-group>
-    <a-timeline-animation select="#audio1" name="move1"></a-timeline-animation>
+    <a-timeline-animation select="#audio1" name="move0"></a-timeline-animation>
     <a-timeline-animation select="#audio2" name="move2"></a-timeline-animation>
-    <a-timeline-animation select="#audio3" name="move3"></a-timeline-animation>
+    <a-timeline-animation select="#audio3" name="move4"></a-timeline-animation>
+    <a-timeline-animation select="#audio4" name="move6"></a-timeline-animation>
+  </a-timeline-group>
+  
+  <a-timeline-group>
+    <a-timeline-animation select="#audio1" name="move1"></a-timeline-animation>
+    <a-timeline-animation select="#audio2" name="move3"></a-timeline-animation>
+    <a-timeline-animation select="#audio3" name="move5"></a-timeline-animation>
+    <a-timeline-animation select="#audio4" name="move7"></a-timeline-animation>
+  </a-timeline-group>
+  
+  <a-timeline-group>
+    <a-timeline-animation select="#audio1" name="move2"></a-timeline-animation>
+    <a-timeline-animation select="#audio2" name="move4"></a-timeline-animation>
+    <a-timeline-animation select="#audio3" name="move6"></a-timeline-animation>
+    <a-timeline-animation select="#audio4" name="move0"></a-timeline-animation>
+  </a-timeline-group>
+  
+  <a-timeline-group>
+    <a-timeline-animation select="#audio1" name="move3"></a-timeline-animation>
+    <a-timeline-animation select="#audio2" name="move5"></a-timeline-animation>
+    <a-timeline-animation select="#audio3" name="move7"></a-timeline-animation>
+    <a-timeline-animation select="#audio4" name="move1"></a-timeline-animation>
+  </a-timeline-group>
+  
+  
+  <a-timeline-group>
+    <a-timeline-animation select="#audio1" name="move4"></a-timeline-animation>
+    <a-timeline-animation select="#audio2" name="move6"></a-timeline-animation>
+    <a-timeline-animation select="#audio3" name="move0"></a-timeline-animation>
+    <a-timeline-animation select="#audio4" name="move2"></a-timeline-animation>
+  </a-timeline-group>
+  
+  
+  <a-timeline-group>
+    <a-timeline-animation select="#audio1" name="move5"></a-timeline-animation>
+    <a-timeline-animation select="#audio2" name="move7"></a-timeline-animation>
+    <a-timeline-animation select="#audio3" name="move1"></a-timeline-animation>
+    <a-timeline-animation select="#audio4" name="move3"></a-timeline-animation>
+  </a-timeline-group>
+  
+  
+  <a-timeline-group>
+    <a-timeline-animation select="#audio1" name="move6"></a-timeline-animation>
+    <a-timeline-animation select="#audio2" name="move0"></a-timeline-animation>
+    <a-timeline-animation select="#audio3" name="move2"></a-timeline-animation>
     <a-timeline-animation select="#audio4" name="move4"></a-timeline-animation>
   </a-timeline-group>
   
-  <a-timeline-group>
-    <a-timeline-animation select="#audio4" name="move1"></a-timeline-animation>
-    <a-timeline-animation select="#audio1" name="move2"></a-timeline-animation>
-    <a-timeline-animation select="#audio2" name="move3"></a-timeline-animation>
-    <a-timeline-animation select="#audio3" name="move4"></a-timeline-animation>
-  </a-timeline-group>
   
   <a-timeline-group>
-    <a-timeline-animation select="#audio3" name="move1"></a-timeline-animation>
-    <a-timeline-animation select="#audio4" name="move2"></a-timeline-animation>
-    <a-timeline-animation select="#audio1" name="move3"></a-timeline-animation>
-    <a-timeline-animation select="#audio2" name="move4"></a-timeline-animation>
-  </a-timeline-group>
-  
-  <a-timeline-group>
+    <a-timeline-animation select="#audio1" name="move7"></a-timeline-animation>
     <a-timeline-animation select="#audio2" name="move1"></a-timeline-animation>
-    <a-timeline-animation select="#audio3" name="move2"></a-timeline-animation>
-    <a-timeline-animation select="#audio4" name="move3"></a-timeline-animation>
-    <a-timeline-animation select="#audio1" name="move4"></a-timeline-animation>
+    <a-timeline-animation select="#audio3" name="move3"></a-timeline-animation>
+    <a-timeline-animation select="#audio4" name="move5"></a-timeline-animation>
   </a-timeline-group>
 </a-timeline>
 
 <a-entity animation-timeline__1="timeline: #timeline1; loop: true;">
   <a-mixin id="move-animations"
-    animation__move1="property: position; dur: 5000; from: -2 0 -2; to: 2 0 -2; easing: linear; autoplay: false"
-    animation__move2="property: position; dur: 5000; from: 2 0 -2; to: 2 0 2; easing: linear; autoplay: false"
-    animation__move3="property: position; dur: 5000; from: 2 0 2; to: -2 0 2; easing: linear; autoplay: false"
-    animation__move4="property: position; dur: 5000; from: -2 0 2; to: -2 0 -2; easing: linear; autoplay: false"
+    animation__move0="property: position; dur: 40000; from: 0 0 -2; to: -2 0 -2; easing: linear; autoplay: false"
+    animation__move1="property: position; dur: 40000; from: -2 0 -2; to: -2 0 0; easing: linear; autoplay: false"
+    animation__move2="property: position; dur: 40000; from: -2 0 0; to: -2 0 2; easing: linear; autoplay: false"
+    animation__move3="property: position; dur: 40000; from: -2 0 2; to: 0 0 2; easing: linear; autoplay: false"
+    animation__move4="property: position; dur: 40000; from: 0 0 2; to: 2 0 2; easing: linear; autoplay: false"
+    animation__move5="property: position; dur: 40000; from: 2 0 2; to: 2 0 0; easing: linear; autoplay: false"
+    animation__move6="property: position; dur: 40000; from: 2 0 0; to: 2 0 -2; easing: linear; autoplay: false"
+    animation__move7="property: position; dur: 40000; from: 2 0 -2; to: 0 0 -2; easing: linear; autoplay: false"
   ></a-mixin>
 
   <a-entity
     id="audio1"
     audio-visualiser
-    position="-2 0 -2"
+    position="0 0 -2"
     resonance-source="0"
     mixin="move-animations"
   ></a-entity>
   <a-entity
     id="audio2"
     audio-visualiser
-    position="2 0 -2"
+    position="-2 0 0"
     resonance-source="1"
     mixin="move-animations"
   ></a-entity>
   <a-entity
     id="audio3"
     audio-visualiser
-    position="2 0 2"
+    position="0 0 2"
     resonance-source="2"
     mixin="move-animations"
   ></a-entity>
   <a-entity
     id="audio4"
     audio-visualiser
-    position="-2 0 2"
+    position="2 0 0"
     resonance-source="3"
     mixin="move-animations"
   ></a-entity>

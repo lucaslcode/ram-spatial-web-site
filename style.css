@@ -49,8 +49,8 @@ div#loading-bar > div > * {
   top: 0;
   left: 0;
   z-index: 999;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: black;
   color: lightgray;
   display: flex;
@@ -88,7 +88,7 @@ a-marker * {
   display: none;
 }
 
-button {
+button, #freeze-button {
   color: lightgray;
   border-radius: 8px;
   border: 1px solid lightgray;
@@ -103,7 +103,7 @@ button:active:enabled { transform: translateY(4px); }
 
 #error-overlay {
   z-index: 1001;
-  font-size: 8vw;
+  font-size: clamp(2rem, 1rem + 5vw, 4rem);
   color: white;
   background-color: #660000;
   position: absolute;
