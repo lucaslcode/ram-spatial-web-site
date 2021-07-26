@@ -1,0 +1,3 @@
+Get-ChildItem . -Filter *.png | ForEach-Object {
+magick -size 1754x2480 canvas:white `( -size 1754x1754 qr-code.svg `) -gravity South -composite `( "$_[1180x1180+117+117]" -resize 617x617 `) +gravity -geometry +569+1295 -composite `( -size 340x340 music.svg `) -gravity North -geometry -400+240 -composite `( -size 260x260 earbuds.svg -crop 220x260+20+0 `) -geometry +200+200 -composite `( -size 260x260 headphones.svg `)  -geometry +440+320 -composite ('qr_code_' + $_)
+}
