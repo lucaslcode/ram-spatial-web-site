@@ -6,7 +6,7 @@
   document.getElementById("freeze-checkbox").addEventListener("change", function() {
     const id = window.localStorage.getItem("aid");
     if (id) {
-      fetch("https://spatialstats.lucas-levin.com/" + id + "/freeze/" + this.checked.toString(), {mode: "no-cors"})
+      fetch("https://spatialstats.lucas-levin.com/" + id + "/freeze/" + this.checked.toString())
         .catch();
     }
   })

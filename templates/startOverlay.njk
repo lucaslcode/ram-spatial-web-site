@@ -28,23 +28,26 @@
   const id = window.localStorage.getItem("aid");
   if (id !== null) {
     if (id) {
-      fetch("https://spatialstats.lucas-levin.com/" + id + "/visit", {mode: "no-cors"}).catch();
+      fetch("https://spatialstats.lucas-levin.com/" + id + "/visit");
     }
-    document.getElementById("consent").style.display = "none";
-    setTimeout(() => document.getElementById("start-overlay").style.opacity = 0, 2000);
+    document.getElementById("consent").remove();
+    setTimeout(() => {
+      document.getElementById("start-overlay").style.opacity = 0;
+      document.getElementById("start-overlay").style.visibility = "hidden";
+    }, 2000);
   } else {
     document.getElementById("accept-analytics").addEventListener("click", function() {
       const id = Date.now().toString(36) + Math.round(Math.random()*100000000000).toString(36);
       window.localStorage.setItem("aid", id);
-      fetch(encodeURI("https://spatialstats.lucas-levin.com/" + id + "/register/" + window.navigator.platform), {mode: "no-cors"})
-        .catch();
+      fetch(encodeURI("https://spatialstats.lucas-levin.com/" + id + "/register/" + window.navigator.platform));
       document.getElementById("start-overlay").style.opacity = 0;
+      document.getElementById("start-overlay").style.visibility = "hidden";
     })
     document.getElementById("deny-analytics").addEventListener("click", function() {
       window.localStorage.setItem("aid", "");
-      fetch(encodeURI("https://spatialstats.lucas-levin.com/deny", {mode: "no-cors"}))
-        .catch();
+      fetch(encodeURI("https://spatialstats.lucas-levin.com/deny"));
       document.getElementById("start-overlay").style.opacity = 0;
+      document.getElementById("start-overlay").style.visibility = "hidden";
     })
   }
 </script>

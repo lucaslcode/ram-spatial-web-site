@@ -69,7 +69,8 @@ div#loading-bar > div > * {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transition: opacity 3s;
+  visibility: visible;
+  transition: all 3s;
   padding: 20px;
 }
 
@@ -114,7 +115,7 @@ button, #freeze-button {
   border-radius: 8px;
   border: 1px solid lightgray;
   background: transparent;
-  padding: 8px;
+  padding: 8px 16px;
   min-width: 64px;
 }
 
