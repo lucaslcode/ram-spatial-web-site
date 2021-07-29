@@ -1,39 +1,106 @@
 <a-timeline id="timeline1">
-  <!--<a-timeline-group>
-    <a-timeline-animation select="#audio1" name="move1"></a-timeline-animation>
-    <a-timeline-animation select="#audio2" name="move1"></a-timeline-animation>
-  </a-timeline-group>
-  
   <a-timeline-group>
-    <a-timeline-animation select="#audio1" name="move2"></a-timeline-animation>
-    <a-timeline-animation select="#audio2" name="move2"></a-timeline-animation>
-  </a-timeline-group>-->
+    <a-timeline-animation select="#violin1" name="origin"></a-timeline-animation>
+    <a-timeline-animation select="#violin2" name="vln1_origin_vln2"></a-timeline-animation>
+    <a-timeline-animation select="#viola" name="vln1_origin_vla"></a-timeline-animation>
+    <a-timeline-animation select="#cello" name="vln1_origin_cello"></a-timeline-animation>
+  </a-timeline-group>
+  <a-timeline-group offset="14888">
+    <a-timeline-animation select="#violin1" name="vla_origin_vln1"></a-timeline-animation>
+    <a-timeline-animation select="#violin2" name="vla_origin_vln2"></a-timeline-animation>
+    <a-timeline-animation select="#viola" name="origin"></a-timeline-animation>
+    <a-timeline-animation select="#cello" name="vla_origin_cello"></a-timeline-animation>
+  </a-timeline-group>
+  <a-timeline-group offset="20837"><!-- starts at 45.725 -->
+    <a-timeline-animation select="#violin1" name="vln2_origin_vln1"></a-timeline-animation>
+    <a-timeline-animation select="#violin2" name="origin"></a-timeline-animation>
+    <a-timeline-animation select="#viola" name="vln2_origin_vla"></a-timeline-animation>
+    <a-timeline-animation select="#cello" name="vln2_origin_cello"></a-timeline-animation>
+  </a-timeline-group>
+  <a-timeline-group offset="3993"><!-- 53.718 -->
+    <a-timeline-animation select="#violin1" name="origin"></a-timeline-animation>
+    <a-timeline-animation select="#violin2" name="vln1_origin_vln2"></a-timeline-animation>
+    <a-timeline-animation select="#viola" name="vln1_origin_vla"></a-timeline-animation>
+    <a-timeline-animation select="#cello" name="vln1_origin_cello"></a-timeline-animation>
+  </a-timeline-group>
+  <a-timeline-group offset="31183"><!-- 89.901 -->
+    <a-timeline-animation select="#violin1" name="cello_origin_vln1"></a-timeline-animation>
+    <a-timeline-animation select="#violin2" name="cello_origin_vln2"></a-timeline-animation>
+    <a-timeline-animation select="#viola" name="cello_origin_vla"></a-timeline-animation>
+    <a-timeline-animation select="#cello" name="origin"></a-timeline-animation>
+  </a-timeline-group>
+  <a-timeline-group offset="3534"><!-- 98.435 -->
+    <a-timeline-animation select="#violin1" name="vln2_origin_vln1"></a-timeline-animation>
+    <a-timeline-animation select="#violin2" name="origin"></a-timeline-animation>
+    <a-timeline-animation select="#viola" name="vln2_origin_vla"></a-timeline-animation>
+    <a-timeline-animation select="#cello" name="vln2_origin_cello"></a-timeline-animation>
+  </a-timeline-group>
+  <a-timeline-group offset="22120"><!-- 125.555 -->
+    <a-timeline-animation select="#violin1" name="vla_origin_vln1"></a-timeline-animation>
+    <a-timeline-animation select="#violin2" name="vla_origin_vln2"></a-timeline-animation>
+    <a-timeline-animation select="#viola" name="origin"></a-timeline-animation>
+    <a-timeline-animation select="#cello" name="vla_origin_cello"></a-timeline-animation>
+  </a-timeline-group>
+  <a-timeline-group offset="12778"><!-- 143.333 -->
+    <a-timeline-animation select="#violin1" name="moveaway_vln1"></a-timeline-animation>
+    <a-timeline-animation select="#violin2" name="moveaway_vln2"></a-timeline-animation>
+    <a-timeline-animation select="#viola" name="moveaway_vla"></a-timeline-animation>
+    <a-timeline-animation select="#cello" name="moveaway_cello"></a-timeline-animation>
+  </a-timeline-group>
 </a-timeline>
 
 <a-entity animation-timeline__1="timeline: #timeline1; loop: false;">
+  <a-mixin id="move-animations"
+    animation__origin="property: position; dur: 5000; from: 0 0 -0.01; to: 0 0 -0.01; easing: linear; autoplay: false"
+    animation__cello_origin_vln1="property: position; dur: 5000; from: 0 0 -1.5; to: 0 0 -1.5; easing: linear; autoplay: false"
+    animation__cello_origin_vln2="property: position; dur: 5000; from: .5 0 -1; to: .5 0 -1; easing: linear; autoplay: false"
+    animation__cello_origin_vla="property: position; dur: 5000; from: .5 0 -.5; to: .5 0 -.5; easing: linear; autoplay: false"
+    
+    animation__vln1_origin_vln2="property: position; dur: 5000; from: -.5 0 -.5; to: -.5 0 -.5; easing: linear; autoplay: false"
+    animation__vln1_origin_vla="property: position; dur: 5000; from: -.5 0 -1; to: -.5 0 -1; easing: linear; autoplay: false"
+    animation__vln1_origin_cello="property: position; dur: 5000; from: 0 0 -1.5; to: 0 0 -1.5; easing: linear; autoplay: false"
+    
+    animation__vln2_origin_vln1="property: position; dur: 5000; from: .5 0 -.5; to: .5 0 -.5; easing: linear; autoplay: false"
+    animation__vln2_origin_vla="property: position; dur: 5000; from: -.5 0 0; to: -.5 0 0; easing: linear; autoplay: false"
+    animation__vln2_origin_cello="property: position; dur: 5000; from: -1 0 -.5; to: -1 0 -.5; easing: linear; autoplay: false"
+    
+    animation__vla_origin_vln1="property: position; dur: 5000; from:  1 0 -.5; to:  1 0 -.5; easing: linear; autoplay: false"
+    animation__vla_origin_vln2="property: position; dur: 5000; from: .5 0 0; to: .5 0 0; easing: linear; autoplay: false"
+    animation__vla_origin_cello="property: position; dur: 5000; from: -.5 0 -.5; to: -.5 0 -.5; easing: linear; autoplay: false"
+
+    animation__moveaway_vln1="property: position; dur: 10000; from: -1 0 -.5; to: -1 0 -1.5; easing: linear; autoplay: false"
+    animation__moveaway_vln2="property: position; dur: 10000; from: -0.5 0 -1; to: -0.5 0 -2; easing: linear; autoplay: false"
+    animation__moveaway_vla="property: position; dur: 10000; from: 0.5 0 -1; to: 0.5 0 -2; easing: linear; autoplay: false"
+    animation__moveaway_cello="property: position; dur: 10000; from: 1 0 -.5; to: 1 0 -1.5; easing: linear; autoplay: false"
+
+  ></a-mixin>
   <a-entity
     id="violin1"
     audio-visualiser
     position="-0.75 0 -5"
     resonance-source="0"
+    mixin="move-animations"
   ></a-entity>
   <a-entity
     id="violin2"
     audio-visualiser
     position="-0.25 0 -5.5"
     resonance-source="1"
+    mixin="move-animations"
   ></a-entity>
   <a-entity
     id="viola"
     audio-visualiser
     position="0.25 0 -5.5"
     resonance-source="2"
+    mixin="move-animations"
   ></a-entity>
   <a-entity
     id="cello"
     audio-visualiser
     position="0.75 0 -5"
     resonance-source="3"
+    mixin="move-animations"
   ></a-entity>
   <!--<a-entity
     id="audio1"
