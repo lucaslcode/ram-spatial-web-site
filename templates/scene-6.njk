@@ -1,7 +1,7 @@
 <a-timeline id="timeline1">
-  <a-timeline-group>
+  <!--<a-timeline-group>
     <a-timeline-animation select="#audio-thunder" name="move1" offset="37000"></a-timeline-animation>
-  </a-timeline-group>
+  </a-timeline-group>-->
 </a-timeline>
 
 <a-entity animation-timeline__1="timeline: #timeline1; loop: false;">
@@ -25,10 +25,8 @@
     resonance-source="2"
   ></a-entity>
   <a-entity
-    id="audio-thunder"
-    audio-visualiser
-    position="0 2 -0.5"
+    id="audio-ambi"
     resonance-source="3"
-    animation__move1="property: position; dur: 7000; from: -3 2 0; to: 3 2 0; easing: linear; autoplay: false"
-  ></a-entity>
+    data-is-ambisonic
+    ></a-entity>
 </a-entity>
