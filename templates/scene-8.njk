@@ -1,14 +1,70 @@
 <a-timeline id="timeline1">
-  <!--<a-timeline-group>
-    <a-timeline-animation select="#audio-viola" name="move1"></a-timeline-animation>
-  </a-timeline-group>-->
+  <!-- 9.00 -->
+  <a-timeline-animation select="#audio-viola" name="move1" offset="9000"></a-timeline-animation>
+  <!-- 22.500 -->
+  <!-- 42.000 -->
+  <a-timeline-animation select="#audio-viola" name="move2" offset="19500"></a-timeline-animation>
+  <!-- 50.000 -->
+  <!-- 51.600 -->
+  <a-timeline-animation select="#audio-viola" name="move3" offset="1600"></a-timeline-animation>
+  <!-- 62.000 -->
+  <!-- 75.500 -->
+  <a-timeline-animation select="#audio-viola" name="move4" offset="13500"></a-timeline-animation>
+  <!-- 80.500 -->
+  <!-- 94.000 -->
+  <a-timeline-animation select="#audio-viola" name="move5" offset="13500"></a-timeline-animation>
+  <!-- 104.000 -->
+  <!-- 107.000 -->
+  <a-timeline-animation select="#audio-viola" name="move6" offset="3000"></a-timeline-animation>
+  <!-- 113.329 -->
+  <a-timeline-animation select="#audio-viola" name="move7"></a-timeline-animation>
+  <!-- 126.790 -->
+  <!-- 164.00 -->
+  <a-timeline-animation select="#audio-viola" name="move8" offset="37210"></a-timeline-animation>
+  <!-- 165.00 -->
+  <!-- 178.00 -->
+  <a-timeline-animation select="#audio-viola" name="move9" offset="13000"></a-timeline-animation>
+  <!-- 179.00 -->
+  <!-- 192.902 -->
+  <a-timeline-animation select="#audio-viola" name="move10" offset="13902"></a-timeline-animation>
+  <!-- 218.00 -->
+  <!-- 228.00 -->
+  <a-timeline-animation select="#audio-viola" name="move11" offset="10000"></a-timeline-animation>
+  <!-- 229.50 -->
+  <!-- 253.00 -->
+  <a-timeline-animation select="#audio-viola" name="move12" offset="23500"></a-timeline-animation>
+  <!-- 270.744 -->
+  <!-- 294.00 -->
+  <a-timeline-animation select="#audio-viola" name="move13" offset="23256"></a-timeline-animation>
+  <!-- 295.00 -->
+  <!-- 310.00 -->
+  <a-timeline-animation select="#audio-viola" name="move14" offset="15000"></a-timeline-animation>
+  <!-- 314.270 -->
+  <!-- 331.50 -->
+  <a-timeline-animation select="#audio-viola" name="move15" offset="17230"></a-timeline-animation>
+  <!-- 336.220 -->
 </a-timeline>
 
 <a-entity animation-timeline__1="timeline: #timeline1; loop: false;">
   <a-entity
     id="audio-viola"
     audio-visualiser
-    position="0 0 -2.5"
+    position="0 -0.25 6"
     resonance-source="0"
+    animation__move1="property: position; dur: 13500; from: 0 -0.25 6; to: 1 -0.25 1; easing: linear; autoplay: false"
+    animation__move2="property: position; dur: 8000; from: 1 -0.25 1; to: -1 -0.25 1; easing: linear; autoplay: false"
+    animation__move3="property: position; dur: 10400; from: -1 -0.25 1; to: -1 -0.25 -1; easing: linear; autoplay: false"
+    animation__move4="property: position; dur: 5000; from: -1 -0.25 -1; to: 1 -0.25 -1; easing: linear; autoplay: false"
+    animation__move5="property: position; dur: 10000; from: 1 -0.25 -1; to: 0 -0.25 3; easing: linear; autoplay: false"
+    animation__move6="property: position; dur: 6329; from: 0 -0.25 3; to: 1 -0.25 2; easing: linear; autoplay: false"
+    animation__move7="property: position; dur: 13461; from: 1 -0.25 2; to: -2 -0.25 2; easing: linear; autoplay: false"
+    animation__move8="property: position; dur: 1000; from: -1 -0.25 0; to: -1 -0.25 0; easing: linear; autoplay: false"
+    animation__move9="property: position; dur: 1000; from: 0 -0.25 3; to: 0 -0.25 3; easing: linear; autoplay: false"
+    animation__move10="property: position; dur: 25098; from: 0 -0.25 3; to: 0 -0.25 1.5; easing: linear; autoplay: false"
+    animation__move11="property: position; dur: 1500; from: 0 -0.25 1.5; to: 0 -0.25 1; easing: linear; autoplay: false"
+    animation__move12="property: position; dur: 17744; from: 0 -0.25 1; to: 1 -0.25 3; easing: linear; autoplay: false"
+    animation__move13="property: position; dur: 1000; from: 0.5 -0.25 1; to: 0.5 -0.25 1; easing: linear; autoplay: false"
+    animation__move14="property: position; dur: 4270; from: 0.5 -0.25 1; to: 0 -0.25 2.5; easing: linear; autoplay: false"
+    animation__move15="property: position; dur: 4720; from: 0 -0.25 2.5; to: 0 -0.25 1; easing: linear; autoplay: false"
   ></a-entity>
 </a-entity>

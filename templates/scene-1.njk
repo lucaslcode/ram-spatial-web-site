@@ -62,41 +62,41 @@
 
 <a-entity animation-timeline__1="timeline: #timeline1; loop: true;">
   <a-mixin id="move-animations"
-    animation__move0="property: position; dur: 40000; from: 0 0 -2; to: -2 0 -2; easing: linear; autoplay: false"
-    animation__move1="property: position; dur: 40000; from: -2 0 -2; to: -2 0 0; easing: linear; autoplay: false"
-    animation__move2="property: position; dur: 40000; from: -2 0 0; to: -2 0 2; easing: linear; autoplay: false"
-    animation__move3="property: position; dur: 40000; from: -2 0 2; to: 0 0 2; easing: linear; autoplay: false"
-    animation__move4="property: position; dur: 40000; from: 0 0 2; to: 2 0 2; easing: linear; autoplay: false"
-    animation__move5="property: position; dur: 40000; from: 2 0 2; to: 2 0 0; easing: linear; autoplay: false"
-    animation__move6="property: position; dur: 40000; from: 2 0 0; to: 2 0 -2; easing: linear; autoplay: false"
-    animation__move7="property: position; dur: 40000; from: 2 0 -2; to: 0 0 -2; easing: linear; autoplay: false"
+    animation__move0="property: position; dur: 40000; from: 0 -0.25 -2; to: -2 -0.25 -2; easing: linear; autoplay: false"
+    animation__move1="property: position; dur: 40000; from: -2 -0.25 -2; to: -2 -0.25 0; easing: linear; autoplay: false"
+    animation__move2="property: position; dur: 40000; from: -2 -0.25 0; to: -2 -0.25 2; easing: linear; autoplay: false"
+    animation__move3="property: position; dur: 40000; from: -2 -0.25 2; to: 0 -0.25 2; easing: linear; autoplay: false"
+    animation__move4="property: position; dur: 40000; from: 0 -0.25 2; to: 2 -0.25 2; easing: linear; autoplay: false"
+    animation__move5="property: position; dur: 40000; from: 2 -0.25 2; to: 2 -0.25 0; easing: linear; autoplay: false"
+    animation__move6="property: position; dur: 40000; from: 2 -0.25 0; to: 2 -0.25 -2; easing: linear; autoplay: false"
+    animation__move7="property: position; dur: 40000; from: 2 -0.25 -2; to: 0 -0.25 -2; easing: linear; autoplay: false"
   ></a-mixin>
 
   <a-entity
     id="audio1"
     audio-visualiser
-    position="0 0 -2"
+    position="0 -0.25 -2"
     resonance-source="0"
     mixin="move-animations"
   ></a-entity>
   <a-entity
     id="audio2"
     audio-visualiser
-    position="-2 0 0"
+    position="-2 -0.25 0"
     resonance-source="1"
     mixin="move-animations"
   ></a-entity>
   <a-entity
     id="audio3"
     audio-visualiser
-    position="0 0 2"
+    position="0 -0.25 2"
     resonance-source="2"
     mixin="move-animations"
   ></a-entity>
   <a-entity
     id="audio4"
     audio-visualiser
-    position="2 0 0"
+    position="2 -0.25 0"
     resonance-source="3"
     mixin="move-animations"
   ></a-entity>
