@@ -28,10 +28,12 @@ body {
 
 .fade-out {
   opacity: 0;
+  visibility: hidden;
 }
 
 .fade-in {
   opacity: 1;
+  visibility: visible;
 }
 
 div#loading-bar {
@@ -90,7 +92,7 @@ div#loading-bar > div > * {
   right: 0;
   bottom: 0;
   z-index: 998;
-  transition: opacity 1s;
+  transition: all 1s;
   padding: 2vw;
   padding-top: 4vw;
   background: rgb(0,0,0);
@@ -179,4 +181,21 @@ button:active:enabled { transform: translateY(4px); }
 
 #freeze-checkbox:checked ~ #freeze-overlay {
   display: block;
+}
+
+#instructions-overlay {
+  pointer-events: none;
+  position: absolute;
+  top: 50vh;
+  left: 0;
+  z-index: 995;
+  right: 0;
+  bottom: 0;
+  text-shadow: black 1px 1px 1px, black 1px -1px 1px, black -1px 1px 1px, black -1px -1px 1px;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  visibility: visible;
+  padding: 20px;
 }
